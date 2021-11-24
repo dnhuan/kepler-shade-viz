@@ -11041,6 +11041,13 @@ react-app-polyfill@^2.0.0:
     regenerator-runtime "^0.13.7"
     whatwg-fetch "^3.4.1"
 
+react-app-rewired@^2.1.8:
+  version "2.1.8"
+  resolved "https://registry.yarnpkg.com/react-app-rewired/-/react-app-rewired-2.1.8.tgz#e192f93b98daf96889418d33d3e86cf863812b56"
+  integrity sha512-wjXPdKPLscA7mn0I1de1NHrbfWdXz4S1ladaGgHVKdn1hTgKK5N6EdGIJM0KrS6bKnJBj7WuqJroDTsPKKr66Q==
+  dependencies:
+    semver "^5.6.0"
+
 react-color@^2.17.3:
   version "2.19.3"
   resolved "https://registry.yarnpkg.com/react-color/-/react-color-2.19.3.tgz#ec6c6b4568312a3c6a18420ab0472e146aa5683d"
@@ -12447,6 +12454,13 @@ spdy@^4.0.2:
     http-deceiver "^1.2.7"
     select-hose "^2.0.0"
     spdy-transport "^3.0.0"
+
+speed-measure-webpack-plugin@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/speed-measure-webpack-plugin/-/speed-measure-webpack-plugin-1.5.0.tgz#caf2c5bee24ab66c1c7c30e8daa7910497f7681a"
+  integrity sha512-Re0wX5CtM6gW7bZA64ONOfEPEhwbiSF/vz6e2GvadjuaPrQcHTQdRGsD8+BE7iUOysXH8tIenkPCQBEcspXsNg==
+  dependencies:
+    chalk "^4.1.0"
 
 split-string@^3.0.1, split-string@^3.0.2:
   version "3.1.0"
