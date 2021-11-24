@@ -1,7 +1,5 @@
 import React from "react";
 import KeplerGl from "kepler.gl";
-import logo from "./logo.svg";
-import { Counter } from "./features/counter/Counter";
 import "./App.css";
 import "./mapbox-gl.css";
 import mapboxToken from "./configs/config";
