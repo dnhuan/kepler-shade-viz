@@ -7,4 +7,4 @@ Todo:
 - [ ] Add option for user to select cities
 - [ ] Add Datasets from URL
 - [ ] Set up backend to host datasets
-
+- [ ] Load Datasets progress bar
