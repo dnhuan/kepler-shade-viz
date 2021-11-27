@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import KeplerGl from "kepler.gl";
-import mapboxToken from "./configs/config";
+import { AUTH_TOKENS } from "./constants/default-settings";
 import AutoSizer from "react-virtualized-auto-sizer";
 import "./ff-clan-web-pro.css";
 
@@ -22,7 +22,7 @@ export default function App() {
 				{({ height, width }) => (
 					<KeplerGl
 						id="shademap"
-						mapboxApiAccessToken={mapboxToken}
+						mapboxApiAccessToken={AUTH_TOKENS.MAPBOX_TOKEN}
 						width={width}
 						height={height}
 					/>

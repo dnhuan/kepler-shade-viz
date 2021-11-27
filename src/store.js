@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import counterReducer from "../features/counter/counterSlice";
+import counterReducer from "./features/counter/counterSlice";
 import keplerGlReducer from "kepler.gl/reducers";
 import { taskMiddleware } from "react-palm/tasks";
 
