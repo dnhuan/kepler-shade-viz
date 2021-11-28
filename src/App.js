@@ -1,9 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import KeplerGl from "kepler.gl";
 import { AUTH_TOKENS } from "./constants/default-settings";
 import AutoSizer from "react-virtualized-auto-sizer";
-import "./ff-clan-web-pro.css";
+import { replaceLoadDataModal } from "./factories/load-data-modal";
+import { injectComponents } from "kepler.gl/components";
+
+const KeplerGl = injectComponents([replaceLoadDataModal()]);
 
 export default function App() {
 	return (

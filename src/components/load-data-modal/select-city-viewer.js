@@ -1,25 +1,38 @@
 import React from "react";
-
-import PropTypes from "prop-types";
 import styled from "styled-components";
-import { Button } from "kepler.gl/components";
+import CityButton from "./city-button";
 
-const propTypes = {
-	onSelectCity: PropTypes.func.isRequired,
-};
+const FlexedDiv = styled.div`
+	display: flex;
+	justify-content: space-around;
+`;
 
-function SelectCityViewer({ cityURL, cityConfigURL }) {
-	onSelectCity = () => {
-		this.props.onSelectCity(cityURL, cityConfigURL);
-	};
-
+export default function SelectCityViewer(onSelectCity) {
+	// use effect hook
+	// get city list - map to buttons
+	let cityList = [
+		{
+			cityName: "Phoenix",
+			cityURL: "https://city.com",
+			cityConfigURL: "https://config.com",
+		},
+		{
+			cityName: "San Francisco",
+			cityURL: "https://city.com",
+			cityConfigURL: "https://config.com",
+		},
+	];
 	return (
-		<Button type="submit" cta size="small" onClick={this.onSelectCity}>
-			select city to view shade data
-		</Button>
+		<FlexedDiv>
+			{cityList.map((city) => (
+				<CityButton
+					key={city.cityName}
+					cityName={city.cityName}
+					cityURL={city.cityURL}
+					cityConfigURL={city.cityConfigURL}
+					onSelectCity={onSelectCity}
+				/>
+			))}
+		</FlexedDiv>
 	);
 }
-
-SelectCityViewer.propTypes = propTypes;
-
-export default SelectCityViewer;
