@@ -1,7 +1,7 @@
-import { LoadDataModalFactory, withState } from "kepler.gl/components";
+import { LoadDataModalFactory } from "kepler.gl/components";
 import { LOADING_METHODS } from "../constants/default-settings";
 import SelectCityViewer from "../components/load-data-modal/select-city-viewer";
-import { selectCity } from "../actions";
+
 // missing actions
 
 const CustomLoadDataModalFactory = (...deps) => {
@@ -21,13 +21,11 @@ const CustomLoadDataModalFactory = (...deps) => {
 		loadingMethods: [
 			additionalMethods.city,
 			defaultLoadingMethods.find((lm) => lm.id === "upload"),
-			// TODO: defaultLoadingMethods.find((lm) => lm.id === "storage"),
+			// defaultLoadingMethods.find((lm) => lm.id === "storage"), // TODO: add storage
 		],
 	};
 
-	return withState([], (state) => ({}), {
-		onSelectCity: selectCity,
-	})(LoadDataModal);
+	return LoadDataModal;
 };
 
 CustomLoadDataModalFactory.deps = LoadDataModalFactory.deps;
