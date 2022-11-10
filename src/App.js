@@ -7,6 +7,35 @@ import { injectComponents } from "kepler.gl/components";
 
 const KeplerGl = injectComponents([replaceLoadDataModal()]);
 
+let getMapboxRef = (mapbox, index) => {
+	if (mapbox) {
+		console.log(index);
+		window.mapboxgl = mapbox;
+		const map = mapbox.getMap();
+		map.on("load", () => {
+			map.addSource("radar", {
+				type: "image",
+				url: "https://huandoan.tech/kepler/mockData/mrt_20120627_1600_clipped.png",
+				coordinates: [
+					// lat, long
+					[-111.942731, 33.427787], // north west
+					[-111.925167, 33.427787], // north east
+					[-111.925167, 33.41347], // south east
+					[-111.942731, 33.41347], // south west
+				],
+			});
+			map.addLayer({
+				id: "radar-layer",
+				type: "raster",
+				source: "radar",
+				paint: {
+					"raster-fade-duration": 0,
+				},
+			});
+		});
+	}
+};
+
 export default function App() {
 	return (
 		<GlobalStyledDiv
@@ -27,6 +56,7 @@ export default function App() {
 						mapboxApiAccessToken={AUTH_TOKENS.MAPBOX_TOKEN}
 						width={width}
 						height={height}
+						getMapboxRef={getMapboxRef}
 					/>
 				)}
 			</AutoSizer>
