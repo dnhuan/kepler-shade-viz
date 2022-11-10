@@ -2,6 +2,7 @@ import KeyMirror from "keymirror";
 
 export const LOADING_METHODS = KeyMirror({
 	city: null,
+	raster: null,
 });
 
 export const AUTH_TOKENS = {

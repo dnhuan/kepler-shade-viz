@@ -9,7 +9,7 @@ const FlexedDiv = styled.div`
 	justify-content: space-around;
 `;
 
-export default function SelectCityViewer(onSelectCity) {
+export default function SelectCityModal(onSelectCity) {
 	// use effect hook
 	// get city list - map to buttons
 	// on button click, call onSelectCity with cityURL and cityConfigURL

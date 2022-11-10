@@ -1,7 +1,7 @@
 import { LoadDataModalFactory } from "kepler.gl/components";
 import { LOADING_METHODS } from "../constants/default-settings";
-import SelectCityViewer from "../components/load-data-modal/select-city-viewer";
-
+import SelectCityModal from "../components/select-city/select-city-modal";
+import LinkToRaster from "../components/link-to-raster/link-to-raster-modal";
 // missing actions
 
 const CustomLoadDataModalFactory = (...deps) => {
@@ -11,7 +11,12 @@ const CustomLoadDataModalFactory = (...deps) => {
 		city: {
 			id: LOADING_METHODS.city,
 			label: "Select City",
-			elementType: SelectCityViewer,
+			elementType: SelectCityModal,
+		},
+		raster: {
+			id: LOADING_METHODS.raster,
+			label: "Link to raster data",
+			elementType: LinkToRaster,
 		},
 	};
 
@@ -21,6 +26,7 @@ const CustomLoadDataModalFactory = (...deps) => {
 		loadingMethods: [
 			additionalMethods.city,
 			defaultLoadingMethods.find((lm) => lm.id === "upload"),
+			additionalMethods.raster,
 			// defaultLoadingMethods.find((lm) => lm.id === "storage"), // TODO: add storage
 		],
 	};

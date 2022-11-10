@@ -15,7 +15,7 @@ let getMapboxRef = (mapbox, index) => {
 		map.on("load", () => {
 			map.addSource("radar", {
 				type: "image",
-				url: "https://huandoan.tech/kepler/mockData/mrt_20120627_1600_clipped.png",
+				url: "https://huandoan.tech/cors/https://www.dropbox.com/s/a6j0fh27p19sp2n/mrt_20120627_1600_clipped.png?dl=1",
 				coordinates: [
 					// lat, long
 					[-111.942731, 33.427787], // north west
