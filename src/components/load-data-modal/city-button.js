@@ -27,7 +27,7 @@ export default function CityButton({ cityName, cityURL, cityConfigURL }) {
 			console.log(cityData, cityConfig);
 
 			// merge new data with current map state
-			const newDatasets = [].concat(datasets, cityData.datasets);
+			const newDatasets = [].concat(cityData.datasets, datasets);
 
 			// add new data to map
 			const mapToLoad = KeplerGlSchema.load(newDatasets, config);

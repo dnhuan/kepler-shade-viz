@@ -4,15 +4,15 @@
 Live version at: https://shadelab.vercel.app/
 
 Todo:
-- [ ] Add option for user to select cities
-  - [ ] Add "cities list" modal tab
-    - [ ] Add "cities" buttons
-      - [ ] Retrieve list of cities from database
-      - [ ] Parse cities dataset URL list
-      - [ ] Bind cities with their dataset URL
-    - [ ] Button handlers
-      - [ ] OnClick load data
+- [x] Add option for user to select cities
+  - [x] Add "cities list" modal tab
+    - [x] Add "cities" buttons
+      - [x] Retrieve list of cities from database
+      - [x] Parse cities dataset URL list
+      - [x] Bind cities with their dataset URL
+    - [x] Button handlers
+      - [x] OnClick load data
       - [ ] Update progress bar
-      - [ ] Once done downloading data, pipe dataset to Kepler
+      - [x] Once done downloading data, pipe dataset to Kepler
   - [ ] Add progress bar
-  - [ ] Add "select city" button (bring up modal again)
+  - [x] Add "select city" button (bring up modal again)
