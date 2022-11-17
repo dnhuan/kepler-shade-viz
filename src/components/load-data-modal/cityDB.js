@@ -287,7 +287,7 @@ export const cityList = [
 		group: "North America",
 	},
 	{
-		cityName: "Phoenix (All)",
+		cityName: "Phoenix (Maricopa)",
 		cityURL: "https://huandoan.tech/kepler/PhoenixAll_id5u9v5jq.json",
 		cityURLMin:
 			"https://huandoan.tech/kepler/PhoenixAll_id5u9v5jq_min.json",
