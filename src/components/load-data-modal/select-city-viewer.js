@@ -1,6 +1,7 @@
 import React from "react";
 import CityGroup from "./city-group";
 import styled from "styled-components";
+import "nprogress/nprogress.css";
 
 const GroupDiv = styled.div`
 	/* position: absolute; */
