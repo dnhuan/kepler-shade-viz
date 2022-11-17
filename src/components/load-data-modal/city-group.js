@@ -22,7 +22,7 @@ export default function CityGroup({ group }) {
 						<CityButton
 							key={city.cityName}
 							cityName={city.cityName}
-							cityURL={city.cityURL}
+							cityURL={city.cityURLMin}
 							cityConfigURL={city.configURL}
 						/>
 					))}
